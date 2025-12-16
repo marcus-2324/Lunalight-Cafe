@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login - Lunalight Café</title>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+        }
+        .icon { font-size: 3rem; }
+        .admin-badge {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+        }
+        .btn-login {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+        }
+        .btn-login:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(15, 52, 96, 0.3);
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+    <div class="card shadow-lg border-0 rounded-4" style="max-width: 450px; width: 100%; background: rgba(255, 255, 255, 0.95);">
+        <div class="card-body p-5">
+            <div class="text-center mb-4">
+                <div class="icon mb-3">👤</div>
+                <span class="badge admin-badge text-white px-4 py-2 rounded-pill mb-3 fw-semibold">ADMIN ACCESS</span>
+                <h1 class="fw-bold mb-2">Administrator Login</h1>
+                <p class="text-muted">Lunalight Café Management System</p>
+            </div>
+
+            <form action="login.php" method="post">
+                <input type="hidden" name="ROLE_TYPE" value="ADMIN">
+                
+                <div class="mb-3">
+                    <label class="form-label fw-medium">Username</label>
+                    <input type="text" name="USERNAME" class="form-control form-control-lg rounded-3" placeholder="Enter admin username" required>
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label fw-medium">Password</label>
+                    <input type="password" name="PASSWORD" class="form-control form-control-lg rounded-3" placeholder="Enter admin password" required>
+                </div>
+
+                <button type="submit" class="btn btn-login btn-lg text-white w-100 rounded-3 fw-semibold">Login as Admin</button>
+            </form>
+
+            <div class="text-center mt-4">
+                <a href="Lunalight.html" class="text-decoration-none fw-semibold">← Back to Home</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
