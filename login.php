@@ -22,7 +22,6 @@ if($row) {
     $FULL_NAME = $row['FULL_NAME'];
     $ROLE = $row['ROLE'];
     
-    // Use form auto-submit (like your lab pattern)
     if($ROLE == 'ADMIN') {
         echo '<form id="redirectForm" action="dashboard_admin.php" method="post">
                 <input type="hidden" name="USER_ID" value="'.$USER_ID.'">

@@ -120,8 +120,8 @@ $receipt_html = '<!DOCTYPE html>
         <div class="header">
             <div style="font-size: 40px;">🌙</div>
             <h1>LUNALIGHT CAFÉ</h1>
-            <p>Where Night Meets Delight</p>
-            <p>Manila, Metro Manila, Philippines</p>
+            <p>Where A Cup Under The Moonlight</p>
+            <p>Philippines</p>
             <p>Contact: 09123456789</p>
         </div>
 
@@ -194,7 +194,10 @@ $receipt_html .= '" method="post" style="display: inline;">
 $receipts_folder = 'receipts';
 if(file_exists($receipts_folder) == false) {
     mkdir($receipts_folder, 0777, true);
-}
+} // This is used to make a directory mkdir(folder_name, permissions, recursive);
+// This code is only if you are transfering the website to a different device or server once it done that it can actually be removed
+// if you are sure that the folder wont be changed anytime soon 
+
 
 $filename = 'RECEIPT_' . $ORDER_NUMBER . '.html';
 $filepath = $receipts_folder . '/' . $filename;
